@@ -20,22 +20,15 @@ var discount2 = (ticketCost / 100 * 40); // sconto 40% over 65
 
 
 
-// calcolo sconto minorenni del 20%
+// calcolo sconto minorenni del 20% e 40% over 65
 if( Age < 18) {contenuto.innerText = (ticketCost - discount1)
 alert('Prezzo scontato del 20% per i minorenni!')
 }
-else {
-   contenuto.innerText = (ticketCost)
 
-};
+else if( Age >= 65) { contenuto.innerText = (ticketCost - discount2)
+alert('Prezzo scontato del 40% per gli over 65!')}
 
-
-
-// calcolo sconto over 65 del 40%
-if( Age >= 65) { contenuto.innerText = (ticketCost - discount2)
-alert('Prezzo scontato del 40% per gli over 65!')
-}
-else {
+else{
    contenuto.innerText = (ticketCost)
 
 };
